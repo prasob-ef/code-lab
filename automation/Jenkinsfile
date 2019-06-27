@@ -1,5 +1,12 @@
-stage('build') {
-  dir("build_folder"){
-      bat "build.bat"
+pipeline {
+	stages {
+		stage('BuildStages') {
+			steps {
+				dir(path: 'automation')
+        {
+				  bat 'Build.bat'
+				}
+			}
+		}
   }
 }
